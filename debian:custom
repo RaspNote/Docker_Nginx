@@ -1,0 +1,19 @@
+#How to create a the required custom debian image in order to install wget:
+
+docker pull debian
+docker run -it debian bash
+
+#install the required wget tool
+apt-get update
+apt-get install wget
+
+#type exit to exit the bash
+
+exit
+
+#commit the new bash container to a new image
+docker ps
+
+#read the container ID and insert it in the next command 
+
+docker commit ID admin/repo:1.x
